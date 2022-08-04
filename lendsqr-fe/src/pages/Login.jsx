@@ -18,12 +18,15 @@ const Login = () => {
         </div>
         <div className="login-form-container">
           <h4>Welcome!</h4>
-          <p>Enter details to Login.</p>
+          <p>Enter details to login.</p>
           <form className="login-form">
             <input placeholder="Email" />
             <div className="password-input-box">
-                <input placeholder="Password" />
-            <span className="field-icon">{showPassword ? "Hide" : "Show"}</span></div>
+              <input placeholder="Password" />
+              <span className="field-icon">
+                {showPassword ? "Hide" : "Show"}
+              </span>
+            </div>
             <a>Forgot Password?</a>
             <button className="btn btn-green login-btn">Log In</button>
           </form>

@@ -1,3 +1,23 @@
 * {
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: local('AvenirNextRegular'),
+         url('../fonts/AvenirNextLTPro-Regular.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: local('AvenirNextBold'),
+         url('../fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextLT';
+    src: local('AvenirNextLT'),
+         url('../fonts/AvenirNextLTPro-lt.otf') format("opentype"),
+}
+html,body{
+    font-family: 'AvenirNextRegular', sans-serif;
+}
