@@ -1,28 +1,18 @@
 .login-container{
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 10px;
     height: 100vh;
 }
 
 .login-first-half{
     padding: 30px 20px;
-    margin: 20px 50px; 
-    // min-height: 100vh;  
+    margin: 20px 50px;  
     display: grid;
 }
 
-.logo-container{
-    display: inline-block
-}
-
-.logo-container img:first-of-type{
-    // margin-bottom: 80px;
-    margin-right: 8px
-}
-
 .login-img{
-    align-self: start
+    align-self: start;
+    justify-self: center;
 }
 
 .login-second-half{
@@ -81,6 +71,11 @@
 
     input{
         border: transparent;
+        width: 100%;
+    }
+
+    input:focus{
+        border: transparent;
     }
 
     span{
@@ -89,6 +84,7 @@
         font-weight: 500;
         color: var(--primary-light-blue);
         letter-spacing: 0.1em;
+        font-family: 'AvenirNextBold';
     }
 }
 
@@ -115,6 +111,27 @@
 
     .login-form-container{
         padding: 15px;
+        margin: auto;
+    }
+
+    .login-form{
+        width: 95%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .login-container{
+        align-content: center;
+        margin: auto
+    }
+
+    .login-first-half{
+        padding: 30px;
+        margin: auto
+    }
+
+    .login-form-container{
         margin: auto;
     }
 

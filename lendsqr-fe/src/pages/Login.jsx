@@ -4,6 +4,9 @@ import logo from "../assets/logo/Group.svg";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <div className="login-container">
       <div className="login-first-half">
@@ -22,8 +25,8 @@ const Login = () => {
           <form className="login-form">
             <input placeholder="Email" />
             <div className="password-input-box">
-              <input placeholder="Password" />
-              <span className="field-icon">
+              <input placeholder="Password" type="password" />
+              <span className="field-icon" onClick={togglePassword}>
                 {showPassword ? "Hide" : "Show"}
               </span>
             </div>
