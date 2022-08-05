@@ -38,3 +38,34 @@ html,body{
 .mt-6{
     margin-top: 1.5rem;
 }
+
+.main-container{
+    padding: 30px 0px 60px 320px;
+}
+
+.contain {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.page-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--primary-dark-blue);
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+}
