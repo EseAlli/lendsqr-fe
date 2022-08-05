@@ -2,9 +2,11 @@
     background-color: var(--primary-white);
     height: 100vh;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-    max-width: 283px;
-    padding: 40px 30px;
+    width: 283px;
+    padding: 30px;
     overflow-y: scroll;
+    z-index: 10;
+    position: absolute;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -21,9 +23,47 @@
 .sidebar-content{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    // gap: 20px;
 
     a{
         text-decoration: none;
+    }
+}
+
+.list-item{
+    align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: 50px;
+  outline: none;
+//   padding: 0 15px;
+//   margin-bottom: 20px;
+  position: relative;
+  text-decoration: none;
+  gap:10px;
+  color: var(--primary-dark-blue);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+.subhead{
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--primary-dark-blue)
+}
+
+.show{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .sidebar{
+        width: 100%;
+        display: none;
     }
 }
