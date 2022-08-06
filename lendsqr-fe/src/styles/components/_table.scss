@@ -21,14 +21,24 @@
         padding: 10px  5px;
         position: relative;
 
+        .icon-btn{
+            border: transparent;
+            background-color: transparent
+        };
+
         span{
-            margin-left: 8px;;
-            height: 14.44px;
+            margin-left: 8px;
             font-weight: 600;
-            vertical-align: text-bottom;
-            position: absolute;
-            top:7.67px;
             font-size: 22px
+        }
+    }
+
+    .table-header {
+        display:flex;
+        align-items: center;
+
+        span{
+            display: block;
         }
     }
 

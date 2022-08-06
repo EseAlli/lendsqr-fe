@@ -47,165 +47,171 @@ const UserDetails = () => {
           </div>
         </div>
 
-        <div className="tabs shadow-box">
-          <h3 className="tab-accordion-header">Documents</h3>
-          <div className="tab-content">
-            <p className="section-title">Personal Information</p>
-            <div className="section">
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-            </div>
-            <hr />
-            <p className="section-title">Personal Information</p>
-            <div className="section">
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-            </div>
-            <hr />
-            <p className="section-title">Personal Information</p>
-            <div className="section">
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-            </div>
-            <hr />
-            <p className="section-title">Personal Information</p>
-            <div className="section">
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-              <div className="section-content">
-                <p className="label">Full Name</p>
-                <p className="value">Grace Effiom</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <GeneralInfo />
       </div>
     </Layout>
   );
 };
 
 export default UserDetails;
+
+const GeneralInfo = () => {
+  return (
+    <div className="tabs shadow-box">
+      <h3 className="tab-accordion-header">Documents</h3>
+      <div className="tab-content">
+        <p className="section-title">Personal Information</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+        <hr />
+        <p className="section-title">Personal Information</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+        <hr />
+        <p className="section-title">Personal Information</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+        <hr />
+        <p className="section-title">Personal Information</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Full Name</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

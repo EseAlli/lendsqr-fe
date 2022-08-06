@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
+import Dialog from "../components/Dialog";
 import Filter from "../components/Filter";
 import Layout from "../components/Layout";
 
 const Dashboard = () => {
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(!open);
+  };
   return (
     <Layout>
       <p className="page-title">Dashboard</p>
@@ -13,7 +18,10 @@ const Dashboard = () => {
         <Card />
         <Card />
       </div>
-      <Filter/>
+      <Dialog open={open} handleClick={handleClick}>
+        {/* <Filter /> */}
+        <p>Hello</p>
+      </Dialog>
     </Layout>
   );
 };

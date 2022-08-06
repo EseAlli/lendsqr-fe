@@ -26,7 +26,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-content">
-        <Link to="#" className="list-item mb-4">
+        <Link to="#" className="list-item org">
           <div>
             <img src={briefcase} />
           </div>
@@ -41,7 +41,7 @@ const Sidebar = () => {
         </Link>
         <br />
         <p className="subhead">Customers</p>
-        <Link to="/users" className="list-item">
+        <Link to="/users" className="list-item active">
           <img src={friends} />
           Users
         </Link>

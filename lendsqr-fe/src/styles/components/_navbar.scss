@@ -35,7 +35,8 @@
         }
 
         input:focus{
-            border: transparent
+            border: transparent;
+            border-right: 0px transparent;
         }
 
         input::placeholder{
