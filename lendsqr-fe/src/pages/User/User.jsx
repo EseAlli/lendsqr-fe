@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import Card from "../../components/Card";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import users from "../../assets/icons/two-figures.svg";
 import Table from "../../components/Table";
+import Pagination from "../../components/Pagination";
 
 const tablehead = [
   "Organization",
@@ -68,6 +69,16 @@ const data = [
 ];
 
 const User = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [PageSize, setPageSize] = useState(5);
+  const [count, setCount] = useState(500);
+
+  const getMoreItemsByOffset = (page, type) => {
+    setCurrentPage(page);
+    // console.log(type)
+    // fetchOrders(type, page)
+  };
+
   return (
     <div>
       <Navbar />
@@ -83,6 +94,13 @@ const User = () => {
           </div>
           <div className="table-container">
             <Table headers={tablehead} content={data} />
+            <Pagination
+              className="pagination-bar"
+              currentPage={currentPage}
+              totalCount={count}
+              pageSize={PageSize}
+              onPageChange={(page) => getMoreItemsByOffset(page)}
+            />
           </div>
         </div>
       </div>
