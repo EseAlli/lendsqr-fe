@@ -24,8 +24,8 @@ const Table = ({ headers, content }) => {
               <td>{value.organization}</td>
               <td>{value.username}</td>
               <td>{value.email}</td>
-              <td>{value.date_joined}</td>
               <td>{value.phone_number}</td>
+              <td>{value.date_joined}</td>
               <td>{value.status}</td>
               <td>
                 <span className="material-symbols-outlined">more_vert</span>
