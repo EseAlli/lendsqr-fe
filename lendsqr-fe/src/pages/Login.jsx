@@ -4,8 +4,18 @@ import logo from "../assets/logo/Group.svg";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [passwordType, setPasswordType] = useState("password");
+  const [passwordInput, setPasswordInput] = useState("");
+  const handlePasswordChange = (e) => {
+    setPasswordInput(e.target.value);
+  };
   const togglePassword = () => {
     setShowPassword(!showPassword);
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
   };
   return (
     <div className="login-container">
@@ -25,7 +35,12 @@ const Login = () => {
           <form className="login-form">
             <input placeholder="Email" />
             <div className="password-input-box">
-              <input placeholder="Password" type="password" />
+              <input
+                placeholder="Password"
+                type={passwordType}
+                onChange={handlePasswordChange}
+                value={passwordInput}
+              />
               <span className="field-icon" onClick={togglePassword}>
                 {showPassword ? "Hide" : "Show"}
               </span>
