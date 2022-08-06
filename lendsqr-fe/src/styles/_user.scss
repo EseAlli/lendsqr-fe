@@ -80,7 +80,7 @@
 	padding: 0;
     li{
         list-style: none;
-        padding: 5px 15px;
+        padding: 10px 15px;
         padding-bottom: 0px
     }
 }
@@ -91,6 +91,7 @@
     line-height: 19px;
     border-bottom: 3px solid var(--primary-light-blue);
     color: var(--primary-light-blue);
+    padding: 10px 15px;
 }
 
 .tabs{
@@ -118,9 +119,12 @@
 }
 
 .section{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    display: flex;
+    gap: 100px;
+    row-gap: 30px;
+    // grid-template-columns: 25% 25% 25% 25%;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 
     .label{
         font-weight: 400;

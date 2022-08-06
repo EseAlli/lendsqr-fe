@@ -55,6 +55,10 @@ const UserDetails = () => {
 
 export default UserDetails;
 
+const BlankPage = () => {
+  return <div className="shadow-box"></div>;
+};
+
 const GeneralInfo = () => {
   return (
     <div className="tabs shadow-box">
@@ -68,37 +72,89 @@ const GeneralInfo = () => {
           </div>
 
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Phone Number</p>
             <p className="value">Grace Effiom</p>
           </div>
 
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Email Address</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Bvn</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Gender</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Marital Status</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Children</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Type of Residence</p>
             <p className="value">Grace Effiom</p>
           </div>
         </div>
         <hr />
-        <p className="section-title">Personal Information</p>
+        <p className="section-title">Education and Employment</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Level of Eductaion</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Employment Status</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Sector of Employment</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Duration of Employment</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Official Email</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Monthly Income</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+          <div className="section-content">
+            <p className="label">Loan Repayment</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+        <hr />
+        <p className="section-title">Socials</p>
+        <div className="section">
+          <div className="section-content">
+            <p className="label">Twitter</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Facebook</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+
+          <div className="section-content">
+            <p className="label">Instagram</p>
+            <p className="value">Grace Effiom</p>
+          </div>
+        </div>
+        <hr />
+        <p className="section-title">Guarantor</p>
         <div className="section">
           <div className="section-content">
             <p className="label">Full Name</p>
@@ -106,108 +162,16 @@ const GeneralInfo = () => {
           </div>
 
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Phone Number</p>
             <p className="value">Grace Effiom</p>
           </div>
 
           <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Email Address</p>
             <p className="value">Grace Effiom</p>
           </div>
           <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-        </div>
-        <hr />
-        <p className="section-title">Personal Information</p>
-        <div className="section">
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-        </div>
-        <hr />
-        <p className="section-title">Personal Information</p>
-        <div className="section">
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
-            <p className="value">Grace Effiom</p>
-          </div>
-          <div className="section-content">
-            <p className="label">Full Name</p>
+            <p className="label">Relationship</p>
             <p className="value">Grace Effiom</p>
           </div>
         </div>
