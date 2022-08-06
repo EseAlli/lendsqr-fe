@@ -5,16 +5,20 @@ import "./styles/app.scss"
 import User from "./pages/User/User";
 import UserDetails from "./pages/User/UserDetails";
 
+import {UserProvider} from './context/UserContext'
+
 function App() {
   return (
-    <BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
       <Routes>
         <Route exact path='/' element={ <Login/> }/>
         <Route exact path='/dashboard' element ={<Dashboard/>}/>
         <Route path='/users' element ={<User/>}/>
-        <Route path='/users/id' element={<UserDetails/>}/>
+        <Route path='/users/:id' element={<UserDetails/>}/>
       </Routes>
     </BrowserRouter>
+    </UserProvider>
   );
 }
 

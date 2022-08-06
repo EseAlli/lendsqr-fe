@@ -1,7 +1,12 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import moment from "moment";
 const Table = ({ headers, content }) => {
-  console.log(headers);
+  let history = useNavigate();
+  const handleClick = (id) => {
+    history(`/users/${id}`);
+  };
+
   return (
     <table className="table">
       <thead>
@@ -20,12 +25,12 @@ const Table = ({ headers, content }) => {
       <tbody>
         {content.map((value, key) => {
           return (
-            <tr key={key}>
-              <td>{value.organization}</td>
-              <td>{value.username}</td>
+            <tr key={key} onClick={() => handleClick(value.id)}>
+              <td>{value.orgName}</td>
+              <td>{value.userName}</td>
               <td>{value.email}</td>
-              <td>{value.phone_number}</td>
-              <td>{value.date_joined}</td>
+              <td>{value.phoneNumber}</td>
+              <td>{moment(value.createdAt).format("dddd, MMMM Do, h:mm a")}</td>
               <td>{value.status}</td>
               <td>
                 <span className="material-symbols-outlined">more_vert</span>
