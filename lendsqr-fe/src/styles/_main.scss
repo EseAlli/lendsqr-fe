@@ -89,5 +89,20 @@ html::-webkit-scrollbar {
     }
     .card-container{
         flex-wrap: wrap;
+        margin: auto;
+        justify-content: center
+    }
+}
+
+@media (max-width: 425px) {
+    .main-container{
+        padding: 10px;
+    }
+    .card-container{
+        flex-wrap: wrap;
+        margin: auto;
+        .card{
+            width: 100%;
+        }
     }
 }
