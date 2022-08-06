@@ -31,6 +31,14 @@ html::-webkit-scrollbar {
     display: flex;
 }
 
+.gap-4{
+    gap: 1rem
+}
+
+.gap-6{
+    gap: 1rem
+}
+
 .mb-4{
     margin-bottom: 1rem;
 }
@@ -44,15 +52,15 @@ html::-webkit-scrollbar {
 }
 
 .main-container{
-    padding: 35px 0px 60px 320px;
+    padding: 35px 0px 60px 300px;
 }
 
 .contain {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .main-content{
@@ -81,6 +89,15 @@ html::-webkit-scrollbar {
     display: block;
     width: 100%;
     overflow-x: auto;
+}
+
+.shadow-box{
+    background-color: var(--primary-white);
+    padding: 15px 20px;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {

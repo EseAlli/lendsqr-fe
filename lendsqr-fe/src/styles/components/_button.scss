@@ -14,3 +14,22 @@
     border: transparent;
     color: var(--primary-white)
 }
+
+.btn-outline{
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+
+}
+
+.btn-outline-red{
+    background-color: var(--primary-white);
+    border: 1px solid var(--primary-dark-red);
+    color: var(--primary-dark-red)
+}
+
+.btn-outline-green{
+    background-color: var(--primary-white);
+    border: 1px solid var(--primary-light-blue);
+    color: var(--primary-light-blue)
+}

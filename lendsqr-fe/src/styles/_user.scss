@@ -1,0 +1,161 @@
+.user-action-btns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.user-details{
+    .shadow-box{
+        padding-bottom: 0px;
+    }
+}
+
+.basic-info{
+    padding: 10px 5px;
+    display: flex;
+    gap:30px;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .info{
+        color: var(--primary-dark-blue);
+    }
+
+    .user-name{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 6px;
+    }
+
+    .user-name + p{
+        margin: 0px;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px
+    }
+
+    hr{
+        display: inline;
+        margin : 0;
+        opacity: 0.2;
+        border: 0.5px solid #545F7D;
+        height: 80px;
+    }
+
+    
+    .tier{
+        font-size: 14px;
+        font-weight: 400;
+        .title{
+            font-weight: 500
+        }
+    }
+
+    .account{
+        font-size: 12px;
+        font-weight: 400;
+        .title{
+            font-size: 22px;
+            margin-top: 8px;
+            margin-bottom: 2px;
+            font-weight: 500
+        }
+    }
+}
+
+.tab-controls{
+    margin-bottom: 0px;
+    padding: 5px 15px;
+    padding-bottom: 0px;
+}
+
+.tab-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+	padding: 0;
+    li{
+        list-style: none;
+        padding: 5px 15px;
+        padding-bottom: 0px
+    }
+}
+
+.tab-list li.active{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 3px solid var(--primary-light-blue);
+    color: var(--primary-light-blue);
+}
+
+.tabs{
+    color: var(--primary-dark-blue)
+}
+
+.tab-accordion-header{
+    display: none;
+}
+
+.tab-content{
+    padding: 10px;
+    hr{
+        margin : 0;      
+        opacity: 0.1;
+        border: 0.5px solid #213F7D;
+        width: 100%;
+    }
+}
+
+.section-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    flex-wrap: wrap;
+
+    .label{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+
+    .value{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    .basic-info{
+        flex-direction: column;
+
+        hr{
+            display: none;
+        }
+    }
+
+    .tab-controls{
+        display: none;
+    }
+    .tab-accordion-header{
+        display: block;
+    }
+
+    .section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
