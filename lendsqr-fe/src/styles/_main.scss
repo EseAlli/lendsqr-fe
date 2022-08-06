@@ -23,6 +23,10 @@ html,body{
     font-family: 'Work Sans', sans-serif;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 .flex{
     display: flex;
 }
@@ -40,7 +44,7 @@ html,body{
 }
 
 .main-container{
-    padding: 30px 0px 60px 320px;
+    padding: 35px 0px 60px 320px;
 }
 
 .contain {
@@ -67,5 +71,23 @@ html,body{
 
 .card-container{
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    margin-top: 45px
+}
+
+.table-container{
+    margin-top: 25px;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .main-container{
+        padding: 10px;
+    }
+    .card-container{
+        flex-wrap: wrap;
+    }
 }

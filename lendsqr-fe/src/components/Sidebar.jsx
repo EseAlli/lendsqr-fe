@@ -35,13 +35,13 @@ const Sidebar = () => {
             <span className="material-symbols-outlined">expand_more</span>
           </div>
         </Link>
-        <Link to="#" className="list-item">
+        <Link to="/dashboard" className="list-item">
           <img src={home} />
           Dashboard
         </Link>
         <br />
         <p className="subhead">Customers</p>
-        <Link to="#" className="list-item">
+        <Link to="/users" className="list-item">
           <img src={friends} />
           Users
         </Link>

@@ -1,12 +1,11 @@
 import React from "react";
-import Users from "../assets/icons/two-figures.svg";
 
-const Card = () => {
+const Card = ({ image, title, content }) => {
   return (
     <div className="card">
-      <img className="card-icon" src={Users} />
-      <h5>Users</h5>
-      <p>2,398</p>
+      <img className="card-icon" src={image} />
+      <h5>{title}</h5>
+      <p>{content}</p>
     </div>
   );
 };
