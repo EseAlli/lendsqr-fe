@@ -1,12 +1,13 @@
 .sidebar{
     background-color: var(--primary-white);
-    height: 100vh;
+    // height: 100vh;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
     width: 283px;
     padding: 30px;
     overflow-y: scroll;
     z-index: 10;
     position: absolute;
+
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
