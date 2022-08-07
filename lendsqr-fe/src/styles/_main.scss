@@ -74,7 +74,7 @@ body{
 
 .main-container{
     padding: 60px;
-    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .contain {
@@ -194,6 +194,7 @@ body{
     .card-container{
         flex-wrap: wrap;
         margin: auto;
+        overflow: hidden;
         .card{
             width: 100%;
         }

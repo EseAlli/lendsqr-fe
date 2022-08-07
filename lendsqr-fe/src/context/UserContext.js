@@ -9,6 +9,7 @@ export const useUserContext = () => {
 
 export const UserProvider = ({children}) => {
     const [users, setUsers] = useState([]);
+    const [showSidebar, setShowSidebar] = useState(true)
 
     const getUser = async (id) => {
        let users = JSON.parse(localStorage.getItem('users'))
@@ -28,7 +29,9 @@ export const UserProvider = ({children}) => {
 
     const value = {
         users,
-        getUser
+        getUser,
+        showSidebar,
+        setShowSidebar
     };
 
     // context

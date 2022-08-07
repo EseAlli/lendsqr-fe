@@ -9,20 +9,28 @@ import activate from "../assets/icons/activate.svg";
 const Table = ({ headers, content }) => {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTable, setActiveTable] = useState(0);
+  const [activeTable, setActiveTable] = useState(-1);
+  const [menuClick, setMenuClick] = useState(false);
   const handleFilterClick = () => {
     setOpen(!open);
   };
 
   const handleMenuClick = (key) => {
     setActiveTable(key);
-    console.log(key, activeTable);
     setMenuOpen(!menuOpen);
+    setMenuClick(true);
   };
 
   let history = useNavigate();
   const handleClick = (id) => {
     history(`/users/${id}`);
+  };
+
+  document.onclick = function (event) {
+    console.log(menuOpen, menuClick);
+    if (menuOpen === true && !menuClick) {
+      setMenuOpen(false);
+    }
   };
 
   return (

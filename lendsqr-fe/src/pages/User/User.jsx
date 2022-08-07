@@ -25,8 +25,6 @@ const User = () => {
 
   const { users } = useUserContext();
 
-  console.log(users);
-
   useEffect(() => {
     setCount(users.length);
   });

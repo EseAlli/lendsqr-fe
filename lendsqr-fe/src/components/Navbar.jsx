@@ -2,7 +2,13 @@ import React from "react";
 import Logo from "../assets/logo/Group.svg";
 import photo from "../assets/images/image.png";
 import bell from "../assets/icons/bell.svg";
+import { useUserContext } from "../context/UserContext";
 const Navbar = () => {
+  const { showSidebar, setShowSidebar } = useUserContext();
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
   return (
     <>
       <div className="navbar">
@@ -26,7 +32,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-mobile">
           <img className="logo" src={Logo} />
-          <span className="material-symbols-outlined">menu</span>
+          <span
+            className="material-symbols-outlined"
+            onClick={() => toggleSidebar()}
+          >
+            menu
+          </span>
         </div>
       </div>
     </>
