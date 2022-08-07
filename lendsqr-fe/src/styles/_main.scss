@@ -110,6 +110,26 @@ body{
     overflow-x: auto;
 }
 
+.table-container::-webkit-scrollbar{
+    height: 2px;
+}
+
+/* Track */
+  .table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .table-container::-webkit-scrollbar-thumb {
+    background: var(--dark-blue-with-opacity); 
+  }
+  
+  /* Handle on hover */
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark-blue)
+  }
+
+
 .shadow-box{
     background-color: var(--primary-white);
     padding: 15px 20px;

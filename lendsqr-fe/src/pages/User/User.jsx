@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
-import Filter from "../../components/Filter";
 import usersIcon from "../../assets/icons/two-figures.svg";
 import Table from "../../components/Table";
 import Pagination from "../../components/Pagination";
@@ -21,11 +20,20 @@ const tablehead = [
 
 const User = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [PageSize, setPageSize] = useState(5);
-  const [count, setCount] = useState(500);
+  const [pageSize, setPageSize] = useState(10);
+  const [count, setCount] = useState(0);
 
   const { users } = useUserContext();
+
   console.log(users);
+
+  useEffect(() => {
+    setCount(users.length);
+  });
+
+  const indexOfLastUser = currentPage * pageSize;
+  const indexOfFirstUser = indexOfLastUser - pageSize;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
   const getMoreItemsByOffset = (page) => {
     setCurrentPage(page);
@@ -41,15 +49,15 @@ const User = () => {
         <Card image={savings} title="Users with savings" content="2,457" />
       </div>
       <div className="table-container">
-        <Table headers={tablehead} content={users} />
-        <Pagination
-          className="pagination-bar"
-          currentPage={currentPage}
-          totalCount={count}
-          pageSize={PageSize}
-          onPageChange={(page) => getMoreItemsByOffset(page)}
-        />
+        <Table headers={tablehead} content={currentUsers} />
       </div>
+      <Pagination
+        className="pagination-bar"
+        currentPage={currentPage}
+        totalCount={count}
+        pageSize={pageSize}
+        onPageChange={(page) => getMoreItemsByOffset(page)}
+      />
     </Layout>
   );
 };

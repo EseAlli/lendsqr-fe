@@ -6,16 +6,24 @@
     overflow-y: scroll
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.sidebar::-webkit-scrollbar {
-    display: none;
+.sidebar::-webkit-scrollbar{
+    width: 1px;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.sidebar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .sidebar::-webkit-scrollbar-thumb {
+    background: var(--dark-blue-with-opacity); 
+  }
+  
+  /* Handle on hover */
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark-blue)
+  }
+
 
 .sidebar-content{
     display: flex;
