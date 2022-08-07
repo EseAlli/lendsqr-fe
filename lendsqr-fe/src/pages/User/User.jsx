@@ -8,6 +8,7 @@ import savings from "../../assets/icons/users-with-savings.svg";
 import loans from "../../assets/icons/users-with-loans.svg";
 import active from "../../assets/icons/active-users.svg";
 import { useUserContext } from "../../context/UserContext";
+import Loader from "../../components/Loader";
 
 const tablehead = [
   "Organization",
@@ -22,12 +23,16 @@ const User = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [count, setCount] = useState(0);
+  const [loader, setLoader] = useState(true);
 
   const { users } = useUserContext();
 
   useEffect(() => {
     setCount(users.length);
-  });
+    if (users) {
+      setLoader(false);
+    }
+  }, [users]);
 
   const indexOfLastUser = currentPage * pageSize;
   const indexOfFirstUser = indexOfLastUser - pageSize;
@@ -39,23 +44,30 @@ const User = () => {
 
   return (
     <Layout>
-      <p className="page-title">Users</p>
-      <div className="card-container">
-        <Card image={usersIcon} title="User" content="2,457" />
-        <Card image={active} title="Active User" content="2,457" />
-        <Card image={loans} title="Users With Loans" content="2,457" />
-        <Card image={savings} title="Users with savings" content="2,457" />
-      </div>
-      <div className="table-container">
-        <Table headers={tablehead} content={currentUsers} />
-      </div>
-      <Pagination
-        className="pagination-bar"
-        currentPage={currentPage}
-        totalCount={count}
-        pageSize={pageSize}
-        onPageChange={(page) => getMoreItemsByOffset(page)}
-      />
+      {loader ? (
+        <Loader />
+      ) : (
+        <>
+          {" "}
+          <p className="page-title">Users</p>
+          <div className="card-container">
+            <Card image={usersIcon} title="User" content="2,457" />
+            <Card image={active} title="Active User" content="2,457" />
+            <Card image={loans} title="Users With Loans" content="2,457" />
+            <Card image={savings} title="Users with savings" content="2,457" />
+          </div>
+          <div className="table-container">
+            <Table headers={tablehead} content={currentUsers} />
+          </div>
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={count}
+            pageSize={pageSize}
+            onPageChange={(page) => getMoreItemsByOffset(page)}
+          />
+        </>
+      )}
     </Layout>
   );
 };
