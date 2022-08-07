@@ -72,7 +72,19 @@ const Table = ({ headers, content }) => {
               <td>{value.email}</td>
               <td>{value.phoneNumber}</td>
               <td>{moment(value.createdAt).format("dddd, MMMM Do, h:mm a")}</td>
-              <td>{value.status}</td>
+              <td
+                className={`${
+                  value.lastActiveDate > moment().toISOString()
+                    ? "active-badge"
+                    : "inactive-badge"
+                }`}
+              >
+                {value.lastActiveDate > moment().toISOString() ? (
+                  <span>Active</span>
+                ) : (
+                  <span>Inactive</span>
+                )}
+              </td>
               <td className="table-action">
                 <Dialog
                   open={menuOpen}

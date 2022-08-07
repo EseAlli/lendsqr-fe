@@ -153,6 +153,27 @@ body{
     width: 270px
 }
 
+.active-badge{
+    color: var(--primary-light-green) !important;
+    span{
+        border: 0.5px solid var(--primary-light-green);
+        border-radius: 100px;
+        padding: 7px 14px;
+        font-weight: 400 !important;
+        background-color: rgba(57, 205, 98, 0.06);
+    }
+}
+
+.inactive-badge{
+    color: var(--primary-dark-blue) !important;
+    span{
+        border: 0.5px solid var(--primary-dark-blue);
+        border-radius: 100px;
+        padding: 7px 14px;
+        font-weight: 400 !important;
+        background-color: rgba(84, 95, 125, 0.06);;
+    }
+}
 @media (max-width: 768px) {
     .main-page{
         grid-template-columns: auto;
