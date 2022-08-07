@@ -23,6 +23,10 @@ import hands from "../assets/icons/hand-holding.svg";
 import scroll from "../assets/icons/scroll.svg";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  // check for which path you are on
+  const isActive = useLocation().pathname;
   return (
     <div className="sidebar">
       <div className="sidebar-content">

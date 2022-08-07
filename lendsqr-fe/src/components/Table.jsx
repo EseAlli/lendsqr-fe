@@ -91,7 +91,7 @@ const Table = ({ headers, content }) => {
                   {key === activeTable && (
                     <div className="tool-tip">
                       <ul>
-                        <li>
+                        <li onClick={() => handleClick(value.id)}>
                           <img src={view} alt="view" />
                           View Details
                         </li>

@@ -11,14 +11,16 @@ export const UserProvider = ({children}) => {
     const [users, setUsers] = useState([]);
 
     const getUser = async (id) => {
-       let {data} = await api.get(`/${id}`);
-       return data
+       let users = JSON.parse(localStorage.getItem('users'))
+       const user = users.find((user) => user.id === id);
+       return user
     };
 
     useEffect(()=>{
         const getUsers = async () => {
             const response = await api.get("/");
             const responseArr = Object.values(response.data);
+            localStorage.setItem('users', JSON.stringify(responseArr))
             setUsers(responseArr);
         };
         return getUsers;
