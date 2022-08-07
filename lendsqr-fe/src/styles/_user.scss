@@ -8,6 +8,7 @@
     .shadow-box{
         padding-bottom: 0px;
     }
+    overflow-x: hidden;
 }
 
 .basic-info{
@@ -15,7 +16,7 @@
     display: flex;
     gap:30px;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     .info{
         color: var(--primary-dark-blue);
@@ -27,6 +28,7 @@
         font-size: 22px;
         line-height: 26px;
         margin-bottom: 6px;
+        margin-top: 0;
     }
 
     .user-name + p{
@@ -78,6 +80,7 @@
     justify-content: space-between;
     margin: 0;
 	padding: 0;
+    white-space: nowrap;
     li{
         list-style: none;
         padding: 10px 15px;
@@ -98,10 +101,6 @@
     color: var(--primary-dark-blue)
 }
 
-.tab-accordion-header{
-    display: none;
-}
-
 .tab-content{
     padding: 10px;
     hr{
@@ -119,18 +118,26 @@
 }
 
 .section{
-    display: flex;
+    display: grid;
     gap: 100px;
     row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 7em));
     // grid-template-columns: 25% 25% 25% 25%;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
 
     .label{
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
         text-transform: uppercase;
+        flex: 1 1 0px;
+        min-width: 0;
     }
 
     .value{
@@ -138,6 +145,8 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
+        flex: 1 1 0px;
+        min-width: 0
     }
 }
 
@@ -151,15 +160,36 @@
     }
 
     .tab-controls{
-        display: none;
+        overflow: scroll;
+        padding: 0px;
+         
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+
     }
-    .tab-accordion-header{
-        display: block;
+
+    .tabs.shadow-box{
+        padding: 5px
     }
 
     .section{
-        display: flex;
-        justify-content: space-between;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 50px;
+        row-gap: 10px;
     }
 
+}
+
+@media (max-width: 425px) {
+    .section{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 30px;
+        row-gap: 10px;
+    }
 }

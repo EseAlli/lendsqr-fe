@@ -9,6 +9,12 @@ export const useUserContext = () => {
 
 export const UserProvider = ({children}) => {
     const [users, setUsers] = useState([]);
+
+    const getUser = async (id) => {
+       let {data} = await api.get(`/${id}`);
+       return data
+    };
+
     useEffect(()=>{
         const getUsers = async () => {
             const response = await api.get("/");
@@ -19,7 +25,8 @@ export const UserProvider = ({children}) => {
     }, []);
 
     const value = {
-        users
+        users,
+        getUser
     };
 
     // context

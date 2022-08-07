@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
 import Dialog from "../components/Dialog";
-import Filter from "../components/Filter";
+import { BlankPage } from "./User/UserDetails";
 import Layout from "../components/Layout";
 
 const Dashboard = () => {
@@ -18,10 +18,7 @@ const Dashboard = () => {
         <Card />
         <Card />
       </div>
-      <Dialog open={open} handleClick={handleClick}>
-        {/* <Filter /> */}
-        <p>Hello</p>
-      </Dialog>
+      <BlankPage />
     </Layout>
   );
 };
