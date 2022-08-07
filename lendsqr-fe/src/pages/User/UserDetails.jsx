@@ -13,7 +13,6 @@ const UserDetails = () => {
   const [loader, setLoader] = useState(true);
   const { getUser } = useUserContext();
   let { id } = useParams();
-  let [isActive, setIsActive] = useState(false);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const tabHeaders = [

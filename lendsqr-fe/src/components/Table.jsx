@@ -3,10 +3,21 @@ import { useNavigate } from "react-router-dom";
 import moment from "moment";
 import Dialog from "./Dialog";
 import Filter from "./Filter";
+import view from "../assets/icons/view.svg";
+import cancel from "../assets/icons/cancel.svg";
+import activate from "../assets/icons/activate.svg";
 const Table = ({ headers, content }) => {
   const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeTable, setActiveTable] = useState(0);
   const handleFilterClick = () => {
     setOpen(!open);
+  };
+
+  const handleMenuClick = (key) => {
+    setActiveTable(key);
+    console.log(key, activeTable);
+    setMenuOpen(!menuOpen);
   };
 
   let history = useNavigate();
@@ -55,15 +66,47 @@ const Table = ({ headers, content }) => {
       <tbody>
         {content.map((value, key) => {
           return (
-            <tr key={key} onClick={() => handleClick(value.id)}>
+            <tr key={key}>
               <td>{value.orgName}</td>
               <td>{value.userName}</td>
               <td>{value.email}</td>
               <td>{value.phoneNumber}</td>
               <td>{moment(value.createdAt).format("dddd, MMMM Do, h:mm a")}</td>
               <td>{value.status}</td>
-              <td>
-                <span className="material-symbols-outlined">more_vert</span>
+              <td className="table-action">
+                <Dialog
+                  open={menuOpen}
+                  handleClick={handleMenuClick}
+                  button={
+                    <button
+                      className="icon-btn"
+                      onClick={() => handleMenuClick(key)}
+                    >
+                      <span className="material-symbols-outlined">
+                        more_vert
+                      </span>
+                    </button>
+                  }
+                >
+                  {key === activeTable && (
+                    <div className="tool-tip">
+                      <ul>
+                        <li>
+                          <img src={view} alt="view" />
+                          View Details
+                        </li>
+                        <li>
+                          <img src={cancel} alt="cancel" />
+                          Blacklist User
+                        </li>
+                        <li>
+                          <img src={activate} alt="activate" />
+                          Activate User
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </Dialog>
               </td>
             </tr>
           );
