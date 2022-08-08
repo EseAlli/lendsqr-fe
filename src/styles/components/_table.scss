@@ -64,7 +64,15 @@
 
     .icon-btn{
         border: transparent;
-        background-color: transparent
+        background-color: transparent;
+        span{
+            padding: 5px;
+            &:hover{
+                background-color: var(--dark-blue-with-opacity);
+                cursor: pointer;
+                border-radius: 50%;    
+            }
+        }
     };
 
     .table-action{

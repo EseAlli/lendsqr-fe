@@ -93,6 +93,27 @@
     width: 100%
 }
 
+@media (max-width: 1024px) {
+    .login-container{
+        align-content: center;
+        margin: auto
+    }
+
+    .login-first-half{
+        padding: 30px;
+        margin: auto
+    }
+
+    .login-form-container{
+        margin: auto;
+    }
+
+    .login-form{
+        width: 95%;
+        margin-top: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .login-first-half{
         display: none;
@@ -121,23 +142,3 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .login-container{
-        align-content: center;
-        margin: auto
-    }
-
-    .login-first-half{
-        padding: 30px;
-        margin: auto
-    }
-
-    .login-form-container{
-        margin: auto;
-    }
-
-    .login-form{
-        width: 95%;
-        margin-top: 30px;
-    }
-}
