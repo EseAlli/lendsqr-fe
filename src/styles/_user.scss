@@ -84,7 +84,11 @@
     li{
         list-style: none;
         padding: 10px 15px;
-        padding-bottom: 0px
+        padding-bottom: 0px;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
@@ -152,9 +156,8 @@
 
 @media (max-width: 768px) {
     .basic-info{
-        flex-direction: column;
-
-        hr{
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
             display: none;
         }
     }
@@ -191,5 +194,20 @@
         grid-template-rows: auto 1fr;
         gap: 30px;
         row-gap: 10px;
+    }
+
+    .basic-info{
+        flex-direction: column;
+        hr{
+            display: none;
+        }
+    }
+    .basic-info + div{
+        text-align: left;
+        width: 100%;
+    }
+    .tier, .account{
+        text-align: left;
+        width: 100%;
     }
 }

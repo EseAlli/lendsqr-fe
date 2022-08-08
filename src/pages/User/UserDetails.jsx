@@ -42,7 +42,7 @@ const UserDetails = () => {
       ) : (
         <>
           <p className="back-btn" onClick={() => navigate(-1)}>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               <img src={back} alt="back-btn" />
             </span>
             Back to Users

@@ -27,7 +27,6 @@ const Sidebar = () => {
 
   // check for which path you are on
   const isActive = useLocation().pathname;
-  console.log(showSidebar);
 
   return (
     <div className={showSidebar ? `sidebar` : `sidebar show`}>
