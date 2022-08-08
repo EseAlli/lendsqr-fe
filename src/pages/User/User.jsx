@@ -29,7 +29,7 @@ const User = () => {
 
   useEffect(() => {
     setCount(users.length);
-    if (users) {
+    if (users.length > 0) {
       setLoader(false);
     }
   }, [users]);
@@ -44,7 +44,7 @@ const User = () => {
 
   return (
     <Layout>
-      {!users ? (
+      {loader ? (
         <Loader />
       ) : (
         <>

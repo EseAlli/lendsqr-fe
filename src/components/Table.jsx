@@ -6,6 +6,7 @@ import Filter from "./Filter";
 import view from "../assets/icons/view.svg";
 import cancel from "../assets/icons/cancel.svg";
 import activate from "../assets/icons/activate.svg";
+
 const Table = ({ headers, content }) => {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
