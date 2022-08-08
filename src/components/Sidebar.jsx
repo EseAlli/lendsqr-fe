@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import briefcase from "../assets/icons/briefcase.svg";
 import home from "../assets/icons/home.svg";
 import sack from "../assets/icons/sack.svg";
@@ -24,7 +24,6 @@ import { useUserContext } from "../context/UserContext";
 
 const Sidebar = () => {
   const { showSidebar, setShowSidebar } = useUserContext();
-  const navigate = useNavigate();
 
   // check for which path you are on
   const isActive = useLocation().pathname;

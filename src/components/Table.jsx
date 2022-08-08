@@ -26,7 +26,7 @@ const Table = ({ headers, content }) => {
     history(`/users/${id}`);
   };
 
-  document.onclick = function (event) {
+  document.onclick = function () {
     if (menuOpen === true && !menuClick) {
       setMenuOpen(false);
     }

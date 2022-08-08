@@ -44,7 +44,7 @@ const User = () => {
 
   return (
     <Layout>
-      {loader ? (
+      {!users ? (
         <Loader />
       ) : (
         <>

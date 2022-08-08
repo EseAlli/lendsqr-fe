@@ -5,19 +5,19 @@
 @font-face {
     font-family: 'AvenirNextRegular';
     src: local('AvenirNextRegular'),
-         url('../fonts/AvenirNextLTPro-Regular.otf') format("opentype"),
+         url('../styles/fonts/AvenirNextLTPro-Regular.otf') format("opentype"),
 }
 
 @font-face {
     font-family: 'AvenirNextBold';
     src: local('AvenirNextBold'),
-         url('../fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
+         url('../styles/fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
 }
 
 @font-face {
     font-family: 'AvenirNextLT';
     src: local('AvenirNextLT'),
-         url('../fonts/AvenirNextLTPro-It.otf') format("opentype"),
+         url('../styles/fonts/AvenirNextLTPro-It.otf') format("opentype"),
 }
 html,body{
     font-family: 'Work Sans', sans-serif;
