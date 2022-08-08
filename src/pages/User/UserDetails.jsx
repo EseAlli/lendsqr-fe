@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout";
 import avatar from "../../assets/icons/avatar.svg";
 import tier from "../../assets/icons/tier.svg";
@@ -7,6 +7,7 @@ import { useUserContext } from "../../context/UserContext";
 import { useState } from "react";
 import Loader from "../../components/Loader";
 import { numberWithCommas } from "../../utils/utils";
+import back from "../../assets/icons/back-btn.svg";
 
 const UserDetails = () => {
   const [user, setUser] = useState({});
@@ -14,6 +15,7 @@ const UserDetails = () => {
   const { getUser } = useUserContext();
   let { id } = useParams();
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const navigate = useNavigate();
 
   const tabHeaders = [
     "General Details",
@@ -31,7 +33,7 @@ const UserDetails = () => {
       setLoader(false);
     }
     fetchData(id);
-  }, [id]);
+  }, [id, getUser]);
 
   return (
     <Layout>
@@ -39,6 +41,12 @@ const UserDetails = () => {
         <Loader />
       ) : (
         <>
+          <p className="back-btn" onClick={() => navigate(-1)}>
+            <span class="material-symbols-outlined">
+              <img src={back} alt="back-btn" />
+            </span>
+            Back to Users
+          </p>
           <p className="page-title">User Details</p>
           <div className="user-action-btns">
             <button className="btn btn-outline btn-outline-red">
@@ -53,7 +61,7 @@ const UserDetails = () => {
             <div className="shadow-box">
               <div className="basic-info">
                 <div className="flex gap-6 info align-items-center">
-                  <img src={user.profile.avatar ?? avatar} />
+                  <img src={user.profile.avatar ?? avatar} alt="avatar" />
                   <div>
                     <p className="user-name">{`${user?.profile?.firstName} ${user?.profile?.lastName}`}</p>
                     <p>lsdjgekh</p>
