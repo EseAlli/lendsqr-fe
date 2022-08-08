@@ -39,7 +39,7 @@ const Pagination = (props) => {
     >
       <span className="show_div">
         Showing {"  "}&nbsp;
-        <span className="show_number">{currentPage}</span>&nbsp; out of{" "}
+        <span className="show_number">{currentPage * 10}</span>&nbsp; out of{" "}
         {totalCount}{" "}
       </span>
       <div className="flex">
