@@ -27,7 +27,6 @@ const Table = ({ headers, content }) => {
   };
 
   document.onclick = function (event) {
-    console.log(menuOpen, menuClick);
     if (menuOpen === true && !menuClick) {
       setMenuOpen(false);
     }

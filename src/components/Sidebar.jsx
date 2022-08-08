@@ -23,17 +23,19 @@ import scroll from "../assets/icons/scroll.svg";
 import { useUserContext } from "../context/UserContext";
 
 const Sidebar = () => {
-  const { showSidebar } = useUserContext();
+  const { showSidebar, setShowSidebar } = useUserContext();
   const navigate = useNavigate();
 
   // check for which path you are on
   const isActive = useLocation().pathname;
+  console.log(showSidebar);
+
   return (
     <div className={showSidebar ? `sidebar` : `sidebar show`}>
       <div className="sidebar-content">
         <Link to="#" className="list-item org">
           <div>
-            <img src={briefcase} />
+            <img src={briefcase} alt="briefcase-icon" />
           </div>
           <div className="flex">
             Switch Organization
@@ -41,196 +43,217 @@ const Sidebar = () => {
           </div>
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="/dashboard"
           className={
             isActive.includes("/dashboard") ? "list-item active" : "list-item"
           }
         >
-          <img src={home} />
+          <img src={home} alt="home" />
           Dashboard
         </Link>
         <br />
         <p className="subhead">Customers</p>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="/users"
           className={
             isActive.includes("/users") ? "list-item active" : "list-item"
           }
         >
-          <img src={friends} />
+          <img src={friends} alt="users" />
           Users
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={users} />
+          <img src={users} alt="users" />
           Guarantors
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={sack} />
+          <img src={sack} alt="loans" />
           Loans
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={handshake} />
+          <img src={handshake} alt="models" />
           Decision Models
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={piggy} />
+          <img src={piggy} alt="savings" />
           Savings
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={hands} />
+          <img src={hands} alt="requests" />
           Loan Requests
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={check} />
+          <img src={check} alt="whitelist" />
           Whitelist
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={times} />
+          <img src={times} alt="karma" />
           Karma
         </Link>
         <p className="subhead mt-6">BUSINESSES</p>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={briefcase} />
+          <img src={briefcase} alt="briefcase-icon" />
           Organization
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={sack} />
+          <img src={sack} alt="products" />
           Loan Products
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={group} />
+          <img src={group} alt="savings-product" />
           Savings Products
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={coins} />
+          <img src={coins} alt="fees" />
           Fees and Charges
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={icon} />
+          <img src={icon} alt="transaction" />
           Transaction
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={galaxy} />
+          <img src={galaxy} alt="services" />
           Services
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={cog} />
+          <img src={cog} alt="account" />
           Service Account
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={scroll} />
+          <img src={scroll} alt="settlement" />
           Settlements
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={chart} />
+          <img src={chart} alt="reports" />
           Reports
         </Link>
         <p className="subhead mt-6">Settings</p>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={slider} />
+          <img src={slider} alt="preference" />
           Preference
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/hi") ? "list-item active" : "list-item"
           }
         >
-          <img src={badge} />
+          <img src={badge} alt="pricing" />
           Fees and Pricing
         </Link>
         <Link
+          onClick={() => setShowSidebar(true)}
           to="#"
           className={
             isActive.includes("/dashboard") ? "list-item active" : "list-item"
           }
         >
-          <img src={clipboard} />
+          <img src={clipboard} alt="alt-logs" />
           Audit Logs
         </Link>
       </div>
