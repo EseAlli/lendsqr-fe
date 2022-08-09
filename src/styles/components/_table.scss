@@ -59,6 +59,9 @@
     tr:last-of-type{
         td{
             border-bottom: transparent;
+            .dialog{
+                top: -90px
+            }
         }
     }
 
@@ -82,7 +85,8 @@
             border: 0px; 
             box-shadow: none;
             width: fit-content;
-            left: -125px;
+            left: -90px;
+            z-index: 100;
         }
 
         &:hover{
@@ -94,7 +98,8 @@
 
 .tool-tip{
     position: absolute;
-    width: 180px;
+    width: 160px;
+    padding: 20px;
     height: 130px;
     background: #FFFFFF;
     border: 1px solid rgba(84, 95, 125, 0.04);
