@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import loginImg from "../assets/images/pablo-sign-in.svg";
 import logo from "../assets/logo/Group.svg";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
+
+  let history = useNavigate();
   const handlePasswordChange = (e) => {
     setPasswordInput(e.target.value);
   };
@@ -45,8 +48,13 @@ const Login = () => {
                 {showPassword ? "Hide" : "Show"}
               </span>
             </div>
-            <a>Forgot Password?</a>
-            <button className="btn btn-green login-btn">Log In</button>
+            <a href="/#">Forgot Password?</a>
+            <button
+              onClick={() => history("/dashboard")}
+              className="btn btn-green login-btn"
+            >
+              Log In
+            </button>
           </form>
         </div>
       </div>
